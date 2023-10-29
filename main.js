@@ -1,6 +1,56 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+//========= Web/猫 =========//
+// Compatible with WebNeko! //
+//==========================//
+//== Now works with ECMA5 ==//
+//==========================//
+// Licensed under the WTFPL //
+//==========================//
+
+// A copy of the license can be found on https://b1nary.tk/dummyneko/#license
+// Download the latest version from https://b1nary.tk/dummyneko/main.js
+
+/* NOTE: WIP, incomplete implementation.
+ * What's working?
+ * - state_still
+ * - state_yawn
+ * - state_sleep
+ * - state_alert
+ * - state_run
+ * Comming soon:
+ * - state_scratch
+ * - state_itch
+ * - home position
+ *
+ * Known bugs:
+ * - default `display_state` updates image source, and some browsers (e.g.
+ *   Chrome) cancel unfinished downloads. Extremely low-bandwidth network users
+ *   never receive the neko (unless they manually preload it)!
+ *   Fix: use `display_state` to display preloaded images
+ *             (could be done without changing this file)
+ *
+ * You can find demo on the page below:
+ *   https://b1nary.tk/dummyneko/
+ * I'm also using this script on my website:
+ *   https://b1nary.tk/
+ * And I've published this project on GitHub:
+ *   https://github.com/b1narykid/dummyneko
+ */
+
 'use strict'
 
-// time between state transition, ms
+// normal time between state transition, ms
 const dt = 300
 // max distance between cursor and cat
 const dmax = 15
@@ -140,7 +190,7 @@ function pointerNearby(p) {
 // - states
 
 function state_still(p, e, n) {
-  if(n == undefined) n = 1
+  if(n == undefined) n = 0
   let next = (n + 1) & 0xFF
 
   if(!pointerNearby(p)) {
@@ -207,7 +257,7 @@ function state_run(p, e, n) {
   if(n != 1 && n != 2) n = 1
 
   if(pointerNearby(p)) {
-    return state_still(p, e)
+    return state_still(p, e, n)
   }
 
   make_step(p)
@@ -219,3 +269,26 @@ function state_run(p, e, n) {
     function() { return state_run(p, e, (n&1)+1) }
   )
 }
+
+
+}
+/*
+     FILE ARCHIVED ON 15:08:58 Sep 30, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:20:17 Oct 29, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 98.815
+  exclusion.robots: 0.221
+  exclusion.robots.policy: 0.199
+  cdx.remote: 0.104
+  esindex: 0.015
+  LoadShardBlock: 68.946 (3)
+  PetaboxLoader3.datanode: 145.864 (5)
+  load_resource: 5376.084 (2)
+  PetaboxLoader3.resolve: 5262.509 (2)
+*/
