@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/gopherjs/gopherwasm/js"
+	"syscall/js"
 
 	neko "github.com/tie/dummyneko"
 )
