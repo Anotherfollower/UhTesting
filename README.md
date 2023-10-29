@@ -1,20 +1,6 @@
->*Neko* (猫, ねこ) is the Japanese word for *cat*.
-
-# Web/猫
-
-[Neko](https://en.wikipedia.org/wiki/Neko_%28software%29) for the web, somewhat compatible with [WebNeko](https://webneko.net).
 
 [![circleci](https://circleci.com/gh/tie/dummyneko.svg?style=shield)](https://circleci.com/gh/tie/dummyneko)
 [![codecov](https://codecov.io/gh/tie/dummyneko/coverage.svg)](https://codecov.io/gh/tie/dummyneko)
-
-## Preview
-
-You can find a cat waiting for mouse on all pages at [b1nary.tk](https://b1nary.tk).
-Don't let the neko catch your mouse!
-
-## Credits
-
-- [Daniil Zakirullin](https://github.com/Vftdan) for hacking on ECMA5-compatibility.
 
 ## Features. What's working?
 - state_still
@@ -47,9 +33,3 @@ Don't let the neko catch your mouse!
 Unlike the [webneko.net](https://webneko.net/n200504.js) JavaScript code, Web/猫 is published and distributed under the Unlicense and WTFPL.  Attribution is optional, but desirable.
 
 Rationales for placing software in public domain are listed in [nothings/stb docs](https://github.com/nothings/stb/blob/master/docs/why_public_domain.md).
-
-### Traditional license
-
-Want a traditional copyright-ish license?
-
->You are granted a perpetual, irrevocable license to copy, modify, publish, and distribute this software as you see fit.
